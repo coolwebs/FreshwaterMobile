@@ -1,0 +1,8 @@
+{
+  "name": "freshwatermobile",
+  "app_id": "f786b183",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
