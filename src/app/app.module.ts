@@ -14,29 +14,44 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpModule } from '@angular/http';
+import { Geolocation } from '@ionic-native/geolocation';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Network } from "@ionic-native/network";
+
 @NgModule({
   declarations: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+      MyApp,
+      HomePage,
+      FilterPage,
+      MacroDetailPage,
+      ContributorsPage,
+      GlossaryPage,
+      LocatorPage,
+      TabsPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+      MyApp,
+      HomePage,
+      FilterPage,
+      MacroDetailPage,
+      ContributorsPage,
+      GlossaryPage,
+      LocatorPage,
+      TabsPage
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
+      StatusBar,
+      SplashScreen,
+      InAppBrowser,
+      Geolocation,
+      Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
