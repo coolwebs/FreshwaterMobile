@@ -1,0 +1,40 @@
+page-locator {
+
+  h1 {
+    text-align: center;
+  }
+  #map {
+    width: 100%;
+    height: 80%;
+  }
+  #geoCoords {
+
+    margin-top: 20px;
+
+    h2 {
+      text-align: center;
+    }
+
+    .geoTable {
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom:1em;
+      td, th {
+        padding: 10px;
+      }
+      th {
+        background: #eee;
+        border-right: 1px solid #ccc;
+      }
+      td {
+        text-align: center;
+        cell-spacing: 5px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+  #reloadMap {
+    display: none;
+    margin: auto
+  }
+}
