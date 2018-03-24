@@ -18,6 +18,7 @@ import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Network } from "@ionic-native/network";
+import { SpecimensProvider } from '../providers/specimens/specimens';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { Network } from "@ionic-native/network";
       InAppBrowser,
       Geolocation,
       Network,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SpecimensProvider
   ]
 })
 export class AppModule {}
