@@ -73,13 +73,14 @@ export class LocatorPage {
       let myGeoCoords;
       myGeoCoords = document.getElementById('geoCoords');
 
-      myGeoCoords.innerHTML = '<h3>Detailed Gelocation information</h3><table class="geoTable"><tr><th class="noborder" border="0" style="background-color: #f9f9f9;"></th><th>Latitude</th><th>Longitude</th><th>Accuracy</th><th>Timestamp</th></tr>' +
-          '<tr><td class="head"><strong>Data Value</strong></td>' +
-          '<td class="centre">' + position.coords.latitude  + '</td>' +
-          '<td class="centre">' + position.coords.longitude + '</td>' +
-          '<td class="centre">'  + position.coords.accuracy + '</td>' +
-          '<td class="centre">' + new Date(position.timestamp) + '</td>'+
-          '</tr>' +
+      myGeoCoords.innerHTML =
+          '<h3>Detailed Gelocation information</h3>' +
+          '<table class="geoTable">' +
+          '<tr><td class="head"><strong>Latitude</strong></td><td class="centre">' + position.coords.latitude  + '</td></tr>' +
+          '<tr><td class="head"><strong>Longitude</strong></td><td class="centre">' + position.coords.longitude + '</td></tr>' +
+          '<tr><td class="head"><strong>Accuracy</strong></td><td class="centre">'  + position.coords.accuracy + '</td></tr>' +
+          '<tr><td colspan="2"><strong>Timestamp</strong></td>' +
+          '<tr><td class="centre" colspan="2">' + new Date(position.timestamp) + '</td></tr>'+
           '</table>';
 
       document.getElementById("reloadMap").style.display="block";
