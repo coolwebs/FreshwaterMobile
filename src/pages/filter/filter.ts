@@ -87,15 +87,6 @@ export class FilterPage {
 
 			});
 
-			// grab the height of header, menu and window height
-			// Then subtract them from header height to find true gallery height on device
-			// Then finally set the gallery display div height for scrolling
-			var appHeaderHeight = $(".tabbar").css("top");
-			appHeaderHeight = parseInt(appHeaderHeight, 10);
-			var menuBarHeight = $(".tabbar").height();
-			var deviceHeight = $(window).height();
-			var galleryHeight = deviceHeight - appHeaderHeight - menuBarHeight;
-			$("#galleryDisplay").css("height", galleryHeight);
 		});
 	}
 

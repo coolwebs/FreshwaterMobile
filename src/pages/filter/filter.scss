@@ -4,18 +4,11 @@ page-filter {
 
       height: 100%;
 
-        .grid {
-
-            #galleryDisplay {
-
-              .grid {
-                height: 100%;
-                overflow: scroll;
-                position: absolute;
-              }
-
+          div {
+            //width: 100%;
+          }
                 .item {
-                    width: 135px;
+                    width: 156px;
                     height: 165px;
                     background: #eee;
                     margin: 3px;
@@ -40,7 +33,6 @@ page-filter {
                 .filter-item {
                     animation: fadeInUp 0.6s;
                 }
-            }
 
             #sortingFilters {
 
@@ -97,8 +89,6 @@ page-filter {
                 }
 
             }
-
-        }
 
     }
 
