@@ -14,3 +14,58 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// Load fonts to use within app
+@font-face {
+  font-family: 'fingerpaint';
+  src: url("../assets/fonts/FingerPaint-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'doppio';
+  src: url("../assets/fonts/DoppioOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'architect';
+  src: url("../assets/fonts/ArchitectsDaughter-Regular.ttf") format("truetype");
+}
+
+$font-fingerpaint: 'fingerpaint', cursive, sans-serif;
+$font-doppio: 'doppio', cursive, sans-serif;
+$font-architect: 'architect', cursive, sans-serif;
+
+ion-header {
+  background: #5e87b0;
+
+  ion-title {
+    font-family: $font-doppio;
+  }
+
+  .toolbar-title {
+    color: white;
+    text-align: center;
+    height: 80%;
+
+    img {
+      width: 42px;
+      height: 42px;
+      margin-right: 5px;
+    }
+  }
+  .toolbar-background {
+    background: #5e87b0;
+  }
+
+  .back-button {
+    color: #fff;
+  }
+
+}
+
+h2 {
+  font-family: $font-architect;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
