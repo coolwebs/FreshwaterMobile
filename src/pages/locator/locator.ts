@@ -13,10 +13,6 @@ export class LocatorPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
 
-    // myButton(){
-    //     alert("clicked on my button");
-    // }
-
   constructor(public navCtrl: NavController, public geolocation: Geolocation) { }
 
   ionViewDidLoad() {
