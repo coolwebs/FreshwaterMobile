@@ -15,10 +15,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpModule } from '@angular/http';
+import { SpecimensProvider } from '../providers/specimens/specimens';
+import { SearchPipe } from '../pipes/search/search';
 import { Geolocation } from '@ionic-native/geolocation';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Network } from "@ionic-native/network";
-import { SpecimensProvider } from '../providers/specimens/specimens';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SpecimensProvider } from '../providers/specimens/specimens';
       ContributorsPage,
       GlossaryPage,
       LocatorPage,
-      TabsPage
+      TabsPage,
+      SearchPipe
   ],
   imports: [
     HttpModule,
@@ -48,13 +50,13 @@ import { SpecimensProvider } from '../providers/specimens/specimens';
       TabsPage
   ],
   providers: [
+      SpecimensProvider,
       StatusBar,
       SplashScreen,
       InAppBrowser,
       Geolocation,
       Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SpecimensProvider
   ]
 })
 export class AppModule {}
