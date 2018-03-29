@@ -75,7 +75,7 @@ export class FilterPage {
 
 	public allMacros = [];
 
-	constructor(private specimensProvider: SpecimensProvider, private http: Http, public navCtrl: NavController) {
+	constructor (private specimensProvider: SpecimensProvider, private http: Http, public navCtrl: NavController) {
 
 		$(document).ready(function($) {
 
@@ -88,6 +88,7 @@ export class FilterPage {
 			});
 
 		});
+
 	}
 
 	ionViewDidLoad() {
@@ -111,9 +112,6 @@ export class FilterPage {
 		this.legs = "";
 		this.tail = "";
 		this.sensitive = "";
-       	//document.getElementById('all').checked = true;
-        // this.navCtrl.setRoot(this.navCtrl.getActive().component);
 	}
-
 
 }
