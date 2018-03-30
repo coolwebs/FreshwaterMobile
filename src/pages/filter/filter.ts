@@ -86,7 +86,7 @@ export class FilterPage {
 				$(this).next().slideToggle('fast');
 
 			});
-			
+
 		});
 
 	}
