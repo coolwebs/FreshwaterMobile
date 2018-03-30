@@ -86,19 +86,7 @@ export class FilterPage {
 				$(this).next().slideToggle('fast');
 
 			});
-
-            /*
-             Grab the total width of the smartphone screen.
-             Then work out 50% of that measurement and assign it to each
-             item class for the specimens (phones have even 2 cols display)
-            */
-            var totalGridWidth = $(".row").width();
-            var colWidth = (totalGridWidth / 2) - 6;
-            console.log(colWidth);
-            //$(".content .grid .filter-item").height = colWidth+"px";
-            $(".content .grid .filter-item").css("width", colWidth);
-            //$("#galleryDisplay").css("height", galleryHeight);
-
+			
 		});
 
 	}
