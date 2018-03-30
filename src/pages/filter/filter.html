@@ -10,8 +10,8 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content>
-	<ion-grid no-padding>
+<ion-content padding>
+	<ion-grid>
 		<ion-row>
 			<div *ngFor="let macro of allMacros">
 				<ion-col col-12 (click)="goToMacroDetailsPage(macro)" class="item filter-item" *ngIf="(size == macro.filter_size || !size) && (shell == macro.filter_shell || !shell) && (legs == macro.filter_legs || !legs) && (tail == macro.filter_tail || !tail) && (sensitive == macro.filter_sensitivity || !sensitive)">
