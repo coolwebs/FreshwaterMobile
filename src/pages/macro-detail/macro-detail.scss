@@ -22,7 +22,6 @@ page-macro-detail {
     .swiper-pagination-bullet {
       background: #fff;
       opacity: 1;
-      //border: 1px solid #888;
     }
     .swiper-pagination-bullet.swiper-pagination-bullet-active {
       background: #007aff;
@@ -30,7 +29,7 @@ page-macro-detail {
     }
   }
   video {
-    //object-fit: cover;
     width: 100%;
+    height: auto;
   }
 }
