@@ -15,72 +15,74 @@
 
 <ion-content padding>
 
-  <ion-card>
-    <ion-card-header><h1>{{macroDetails.title}}</h1></ion-card-header>
-    <ion-card-content>
-      <ion-row nowrap>
-        <ion-col col-6>
+  <h1>{{macroDetails.title}}</h1>
+  <ion-row nowrap>
 
-          <table>
-            <tr>
-              <td width="20%"><strong>Sensitivity Rating</strong></td>
-              <td width="80%">{{macroDetails.sensitivity}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.phylum">
-              <td><strong>Phylum</strong></td>
-              <td>{{macroDetails.phylum}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.class">
-              <td><strong>Class</strong></td>
-              <td>{{macroDetails.class}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.order">
-              <td><strong>Order</strong></td>
-              <td>{{macroDetails.order}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.family">
-              <td><strong>Family</strong></td>
-              <td>{{macroDetails.family}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.genera">
-              <td><strong>Genera</strong></td>
-              <td>{{macroDetails.genera}}</td>
-            </tr>
-            <tr *ngIf="macroDetails.size">
-              <td><strong>Size</strong></td>
-              <td [innerHTML]="macroDetails.size"></td>
-            </tr>
-            <tr *ngIf="macroDetails.habitat">
-              <td><strong>Habitat</strong></td>
-              <td [innerHTML]="macroDetails.habitat"></td>
-            </tr>
-            <tr *ngIf="macroDetails.diet">
-              <td><strong>Diet</strong></td>
-              <td [innerHTML]="macroDetails.diet"></td>
-            </tr>
-            <tr *ngIf="macroDetails.features">
-              <td><strong>Features</strong></td>
-              <td [innerHTML]="macroDetails.features"></td>
-            </tr>
-          </table>
-        </ion-col>
+    <ion-col col-12>
+      <h3 *ngIf="macroDetails.video">Video</h3>
+      <video controls *ngIf="macroDetails.video" poster="./assets/imgs/posters/{{macroDetails.poster}}.jpg" id="video">
+        <source src="./assets/videos/{{macroDetails.video}}.mp4" type="video/mp4">
+        Your device does not support HTML5 video playback.
+      </video>
 
-        <ion-col col-6>
-            <video controls *ngIf="macroDetails.video" poster="./assets/imgs/posters/{{macroDetails.poster}}.jpg" id="video">
-              <source src="./assets/videos/{{macroDetails.video}}.mp4" type="video/mp4">
-              Your device does not support HTML5 video playback.
-            </video>
+      <h3>Images</h3>
+      <ion-slides pager="true">
+        <ion-slide *ngFor="let images of macroDetails.featured_image">
+          <img src="./assets/imgs/specimens/{{images}}.jpg" />
+        </ion-slide>
+      </ion-slides>
+      <small class="slideinfo">Swipe to change the images</small>
+    </ion-col>
+  </ion-row>
 
-            <ion-slides pager="true">
-              <ion-slide *ngFor="let images of macroDetails.featured_image">
-                <img src="./assets/imgs/specimens/{{images}}.jpg" />
-              </ion-slide>
-            </ion-slides>
-            <small class="slideinfo">Swipe to change the images</small>
-        </ion-col>
+  <ion-row>
+    <ion-col col-12>
 
-      </ion-row>
-    </ion-card-content>
-  </ion-card>
+      <h3>Details</h3>
+      <table>
+        <tr>
+          <td width="20%"><strong>Sensitivity Rating</strong></td>
+          <td width="80%">{{macroDetails.sensitivity}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.phylum">
+          <td><strong>Phylum</strong></td>
+          <td>{{macroDetails.phylum}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.class">
+          <td><strong>Class</strong></td>
+          <td>{{macroDetails.class}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.order">
+          <td><strong>Order</strong></td>
+          <td>{{macroDetails.order}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.family">
+          <td><strong>Family</strong></td>
+          <td>{{macroDetails.family}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.genera">
+          <td><strong>Genera</strong></td>
+          <td>{{macroDetails.genera}}</td>
+        </tr>
+        <tr *ngIf="macroDetails.size">
+          <td><strong>Size</strong></td>
+          <td [innerHTML]="macroDetails.size"></td>
+        </tr>
+        <tr *ngIf="macroDetails.habitat">
+          <td><strong>Habitat</strong></td>
+          <td [innerHTML]="macroDetails.habitat"></td>
+        </tr>
+        <tr *ngIf="macroDetails.diet">
+          <td><strong>Diet</strong></td>
+          <td [innerHTML]="macroDetails.diet"></td>
+        </tr>
+        <tr *ngIf="macroDetails.features">
+          <td><strong>Features</strong></td>
+          <td [innerHTML]="macroDetails.features"></td>
+        </tr>
+      </table>
+    </ion-col>
+
+  </ion-row>
 
 </ion-content>

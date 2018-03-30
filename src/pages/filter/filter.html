@@ -1,6 +1,5 @@
 <ion-header>
 	<ion-navbar>
-		<!--<button left menuToggle><ion-icon name="menu"></ion-icon></button>-->
 		<button left menuToggle ion-button small outline color="light">
 			<ion-icon menuClose name="menu"></ion-icon>
 		</button>
@@ -10,11 +9,12 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content>
-	<ion-grid no-padding>
+<ion-content padding>
+	<p>Use the menu button above to access sorting filters for the specimens.</p>
+	<ion-grid>
 		<ion-row>
-			<div *ngFor="let macro of allMacros">
-				<ion-col col-12 (click)="goToMacroDetailsPage(macro)" class="item filter-item" *ngIf="(size == macro.filter_size || !size) && (shell == macro.filter_shell || !shell) && (legs == macro.filter_legs || !legs) && (tail == macro.filter_tail || !tail) && (sensitive == macro.filter_sensitivity || !sensitive)">
+			<ion-col col-6 *ngFor="let macro of allMacros" class="specimen">
+				<div (click)="goToMacroDetailsPage(macro)" id="filter-item" class="item filter-item" *ngIf="(size == macro.filter_size || !size) && (shell == macro.filter_shell || !shell) && (legs == macro.filter_legs || !legs) && (tail == macro.filter_tail || !tail) && (sensitive == macro.filter_sensitivity || !sensitive)">
 					<ion-card>
 						<img src="./assets/imgs/thumbs/{{macro.thumbnail}}.jpg" />
 						<ion-card-content>
@@ -23,10 +23,9 @@
 							</ion-card-title>
 						</ion-card-content>
 					</ion-card>
-				</ion-col>
-			</div>
+				</div>
+			</ion-col>
 		</ion-row>
 	</ion-grid>
-
 
 </ion-content>
