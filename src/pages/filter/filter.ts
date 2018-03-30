@@ -95,7 +95,9 @@ export class FilterPage {
             var totalGridWidth = $(".row").width();
             var colWidth = (totalGridWidth / 2) - 6;
             console.log(colWidth);
-            $(".item").css("width", colWidth);
+            //$(".content .grid .filter-item").height = colWidth+"px";
+            $(".content .grid .filter-item").css("width", colWidth);
+            //$("#galleryDisplay").css("height", galleryHeight);
 
 		});
 
