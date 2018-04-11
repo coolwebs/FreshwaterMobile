@@ -13,7 +13,7 @@
                 <h4 class="accordion-toggle dormantState" (click)="toggleIconSize()">Size <ion-icon id="collapseIcon" [name]="buttonIconSize"></ion-icon></h4>
                 <div class="accordion-content">
                     <p>Select whether the creature is microscopic or bigger than microscopic (can be seen with naked eye).</p>
-                    <ion-list radio-group [(ngModel)]="size">
+                    <ion-list radio-group [(ngModel)]="filterWrapper.size" (ionChange)="applyFilter()">
                         <ion-item>
                             <ion-label>All Sizes</ion-label>
                             <ion-radio id="all" value="" checked></ion-radio>
@@ -36,7 +36,7 @@
                 <h4 class="accordion-toggle dormantState" (click)="toggleIconShell()">Shell <ion-icon [name]="buttonIconShell"></ion-icon></h4>
                 <div class="accordion-content">
                     <p>What type of shell does the creature have?</p>
-                    <ion-list radio-group [(ngModel)]="shell">
+                    <ion-list radio-group [(ngModel)]="filterWrapper.shell" (ionChange)="applyFilter()">
                         <ion-item>
                             <ion-label>All Types</ion-label>
                             <ion-radio id="all" value="" checked></ion-radio>
@@ -61,7 +61,7 @@
                 <h4 class="accordion-toggle dormantState" (click)="toggleIconLegs()">Legs <ion-icon [name]="buttonIconLegs"></ion-icon></h4>
                 <div class="accordion-content">
                     <p>How many pairs of legs does the creature have?</p>
-                    <ion-list radio-group [(ngModel)]="legs">
+                    <ion-list radio-group [(ngModel)]="filterWrapper.legs" (ionChange)="applyFilter()">
                         <ion-item>
                             <ion-label>All Types</ion-label>
                             <ion-radio id="all" value="" checked></ion-radio>
@@ -89,7 +89,7 @@
                 <h4 class="accordion-toggle dormantState" (click)="toggleIconTail()">Tail <ion-icon [name]="buttonIconTail"></ion-icon></h4>
                 <div class="accordion-content">
                     <p>Does the animal have a tail or not? If so, how many tails present?</p>
-                    <ion-list radio-group [(ngModel)]="tail" class="propertFilters">
+                    <ion-list radio-group [(ngModel)]="filterWrapper.tail" class="propertFilters" (ionChange)="applyFilter()">
                         <ion-item>
                             <ion-label>All Types</ion-label>
                             <ion-radio id="all" value="" checked></ion-radio>
@@ -118,7 +118,7 @@
                 <h4 class="accordion-toggle dormantState" (click)="toggleIconSense()">Sensitivity <ion-icon [name]="buttonIconSense"></ion-icon></h4>
                 <div class="accordion-content">
                     <p>How sensitive is the animal?</p>
-                    <ion-list radio-group [(ngModel)]="sensitive" id="sensitivity">
+                    <ion-list radio-group [(ngModel)]="filterWrapper.sensitive" id="sensitivity" (ionChange)="applyFilter()">
                         <ion-item>
                             <ion-label>All Types</ion-label>
                             <ion-radio id="all" value="" checked></ion-radio>

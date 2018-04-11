@@ -6,6 +6,8 @@ import * as $ from "jquery";
 import { NavController } from 'ionic-angular';
 import { SpecimensProvider } from '../../providers/specimens/specimens';
 import { MacroDetailPage } from '../../pages/macro-detail/macro-detail';
+import { Events } from 'ionic-angular';
+import { FilterWrapper } from '../../filter.module';
 
 @Component({
 	selector: 'page-filter',
@@ -17,6 +19,8 @@ export class FilterPage {
 	legs: any = "";
 	tail: any = "";
 	sensitive: any = "";
+
+	filterWrapper: FilterWrapper = new FilterWrapper();
 
 	buttonIconSize: string = "ios-add-circle-outline";
 	toggleIconSize(getIcon: string) {
@@ -75,24 +79,22 @@ export class FilterPage {
 
 	public allMacros = [];
 
-	constructor (private specimensProvider: SpecimensProvider, private http: Http, public navCtrl: NavController) {
-
+	constructor (private specimensProvider: SpecimensProvider, private http: Http, public navCtrl: NavController, public events: Events) {
 		$(document).ready(function($) {
-
 			$('#accordion').find('.accordion-toggle').click(function() {
-
 				$(this).toggleClass('activeState');
 				// Expand or collapse this panel
 				$(this).next().slideToggle('fast');
-
 			});
-
 		});
 
+		events.subscribe('filters:changed', (filter) => {
+			console.log(filter);
+			this.filterWrapper = filter;
+		})
 	}
 
 	ionViewDidLoad() {
-		// Get the json data for specimens and prepare for template
 		this.specimensProvider.getSpecimens()
 			.subscribe((response) => {
 				this.allMacros = response;
