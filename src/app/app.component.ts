@@ -35,4 +35,9 @@ export class MyApp {
 		this.events.publish('filters:changed', this.filterWrapper);
     }
 
+	resetFilter(){
+		this.filterWrapper = new FilterWrapper();
+		this.events.publish('filters:changed', this.filterWrapper);
+	}
+
 }

@@ -89,7 +89,6 @@ export class FilterPage {
 		});
 
 		events.subscribe('filters:changed', (filter) => {
-			console.log(filter);
 			this.filterWrapper = filter;
 		})
 	}
@@ -98,7 +97,6 @@ export class FilterPage {
 		this.specimensProvider.getSpecimens()
 			.subscribe((response) => {
 				this.allMacros = response;
-				//console.log(response);
 			});
 	}
 
@@ -107,13 +105,4 @@ export class FilterPage {
 			macroDetails: macro
 		});
 	}
-
-    resetFilter() {
-		this.size = "";
-		this.shell = "";
-		this.legs = "";
-		this.tail = "";
-		this.sensitive = "";
-	}
-
 }
