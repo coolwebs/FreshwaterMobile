@@ -5,18 +5,34 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
-@Component({
-  templateUrl: 'app.html'
-})
-export class MyApp {
-  rootPage:any = TabsPage;
+import { Events } from 'ionic-angular';
+import { FilterWrapper } from '../filter.module';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-    });
-  }
+@Component({
+	templateUrl: 'app.html'
+})
+
+
+
+export class MyApp {
+	size: any = "";
+	shell: any = "";
+	legs: any = "";
+	tail: any = "";
+	sensitive: any = "";
+
+	rootPage: any = TabsPage;
+	filterWrapper: FilterWrapper;
+	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public events: Events) {
+		this.filterWrapper = new FilterWrapper();
+		platform.ready().then(() => {
+			statusBar.styleDefault();
+			splashScreen.hide();
+		});
+	}
+
+	applyFilter() {
+		this.events.publish('filters:changed', this.filterWrapper);
+    }
+
 }
