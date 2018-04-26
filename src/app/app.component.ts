@@ -12,8 +12,6 @@ import { FilterWrapper } from '../filter.module';
 	templateUrl: 'app.html'
 })
 
-
-
 export class MyApp {
 	size: any = "";
 	shell: any = "";

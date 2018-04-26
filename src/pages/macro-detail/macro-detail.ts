@@ -21,8 +21,6 @@ export class MacroDetailPage {
     this.macroDetails = this.navParams.get("macroDetails");
   }
 
-  ionViewDidLoad() {
-    //console.log('ionViewDidLoad MacroDetailPage');
-  }
+  ionViewDidLoad() { }
 
 }
