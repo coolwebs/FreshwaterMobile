@@ -100,9 +100,7 @@
     "title": "Colonial Ciliate",
     "thumbnail": "cciliate-th",
     "featured_image": [
-      "cciliate/caddisfly1",
-      "cciliate/caddisfly2",
-      "cciliate/caddisfly3"
+      "cciliate/colonial-ciliate1"
     ],
     "video": "cciliate",
     "poster": "cciliate-video-poster",
@@ -571,10 +569,8 @@
     "title": "Pygmy Backswimmer",
     "thumbnail": "pygmy-backswimmer-th",
     "featured_image": [
-      "pygmy-backswimmer/nonBiting-midge-larva1",
-      "pygmy-backswimmer/nonBiting-midge-larva2",
-      "pygmy-backswimmer/nonBiting-midge-larva3",
-      "pygmy-backswimmer/nonBiting-midge-larva4"
+      "pygmy-backswimmer/pygmy-backswimmer1",
+      "pygmy-backswimmer/pygmy-backswimmer2"
     ],
     "video": "pygmy-backswimmer",
     "poster": "non-biting-midge-video-poster",
