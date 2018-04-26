@@ -4,18 +4,17 @@
 			<ion-icon menuClose name="menu"></ion-icon>
 		</button>
 		<ion-title>
-			Macroinvertebrates
+			<img src="./assets/icon/freshwater-logo.png" align="absmiddle">
+			Freshwater Macroinvertebrates
 		</ion-title>
 	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
 	<p>Use the menu button above to access sorting filters for the specimens.</p>
-	<!--<ion-grid>-->
-		<!--<ion-row>-->
 			<div class="specimen" *ngFor="let macro of allMacros">
 				<div (click)="goToMacroDetailsPage(macro)" id="filter-item" class="item filter-item" *ngIf="(filterWrapper.size == macro.filter_size || !filterWrapper.size) && (filterWrapper.shell == macro.filter_shell || !filterWrapper.shell) && (filterWrapper.legs == macro.filter_legs || !filterWrapper.legs) && (filterWrapper.tail == macro.filter_tail || !filterWrapper.tail) && (filterWrapper.sensitive == macro.filter_sensitivity || !filterWrapper.sensitive)">
-				<!-- <div (click)="goToMacroDetailsPage(macro)" id="filter-item" class="item filter-item" *ngIf="(size == macro.filter_size || !size) && (shell == macro.filter_shell || !shell) && (legs == macro.filter_legs || !legs) && (tail == macro.filter_tail || !tail) && (sensitive == macro.filter_sensitivity || !sensitive)"> -->
 					<ion-card>
 						<img src="./assets/imgs/thumbs/{{macro.thumbnail}}.jpg" />
 						<ion-card-content>
@@ -26,7 +25,5 @@
 					</ion-card>
 				</div>
 			</div>
-		<!--</ion-row>-->
-	<!--</ion-grid>-->
 
 </ion-content>
