@@ -545,6 +545,32 @@
     "filter_sensitivity": "tolerant"
   },
   {
+    "title": "Pygmy Backswimmer",
+    "thumbnail": "pygmy-backswimmer-th",
+    "featured_image": [
+      "pygmy-backswimmer/nonBiting-midge-larva1",
+      "pygmy-backswimmer/nonBiting-midge-larva2",
+      "pygmy-backswimmer/nonBiting-midge-larva3",
+      "pygmy-backswimmer/nonBiting-midge-larva4"
+    ],
+    "video": "pygmy-backswimmer",
+    "poster": "non-biting-midge-video-poster",
+    "sensitivity": "Very Tolerant",
+    "phylum": "Arthopoda",
+    "class": "Insecta",
+    "order": "Hemiptera",
+    "family": "Pleidae",
+    "size": "2-3mm",
+    "habitat": "Vascular plants in still water",
+    "diet": "Carnivores feeding on microcrustaceans (water fleas and seed shrimp), mosquito larvae and other invertebrates",
+    "features": "Typically, light brown, their body is oval, plump, with a concave back. Their compound eyes are large and the ocelli vestigial, like in other Nepomorpha. A characteristic for the infraorder are the short and weak antennae which are usually carried tucked to the head. There are “swimming hairs” present on middle and hind legs.",
+    "filter_size": "nonmicro",
+    "filter_shell": "noshell",
+    "filter_legs": "threepairs",
+    "filter_tail": "notail",
+    "filter_sensitivity": "veryTol"
+  },
+  {
     "title": "Diving Beetle",
     "thumbnail": "divingBeetle-th",
     "featured_image": [
