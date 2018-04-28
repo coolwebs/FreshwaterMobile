@@ -75,7 +75,7 @@ export class LocatorPage {
       let mapOptions = {
         center: latLng,
         zoom: 15,
-        timeout: 5000,
+        timeout: 10000,
         maximumAge: 3000,
         enableHighAccuracy: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
