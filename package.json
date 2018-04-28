@@ -67,7 +67,8 @@
       "com.testfairy.cordova-plugin": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
