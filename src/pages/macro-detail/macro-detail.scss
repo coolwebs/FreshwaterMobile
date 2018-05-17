@@ -32,4 +32,8 @@ page-macro-detail {
     width: 100%;
     height: auto;
   }
+  h2 { text-align: left; }
+  h3.spacing {
+    margin-top: 1.6rem!important; //override
+  }
 }

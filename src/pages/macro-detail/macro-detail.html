@@ -12,7 +12,7 @@
 
 <ion-content padding>
 
-  <h1>{{macroDetails.title}}</h1>
+  <h2>{{macroDetails.title}}</h2>
   <ion-row nowrap>
 
     <ion-col col-12>
@@ -23,19 +23,22 @@
       </video>
 
       <h3>Images</h3>
-      <ion-slides pager="true">
-        <ion-slide *ngFor="let images of macroDetails.featured_image">
-          <img src="./assets/imgs/specimens/{{images}}.jpg" />
-        </ion-slide>
-      </ion-slides>
-      <small class="slideinfo">Swipe to change the images</small>
+      <div class="image-slideshow" *ngIf="macroDetails.featured_image">
+        <ion-slides pager="true">
+          <ion-slide *ngFor="let images of macroDetails.featured_image">
+            <img src="./assets/imgs/specimens/{{images}}.jpg" />
+          </ion-slide>
+        </ion-slides>
+        <small class="slideinfo">Swipe to change the images</small>
+      </div>
+      <img *ngIf="macroDetails.single_image" src="./assets/imgs/specimens/{{macroDetails.single_image}}.jpg" />
     </ion-col>
   </ion-row>
 
-  <ion-row>
+  <ion-row nowrap>
     <ion-col col-12>
 
-      <h3>Details</h3>
+      <h3 class="spacing">Details</h3>
       <table>
         <tr>
           <td width="20%"><strong>Sensitivity Rating</strong></td>

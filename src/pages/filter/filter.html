@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-
+	<h2>Filter specimens</h2>
 	<p>Use the menu button above to access sorting filters for the specimens.</p>
 			<div class="specimen" *ngFor="let macro of allMacros">
 				<div (click)="goToMacroDetailsPage(macro)" id="filter-item" class="item filter-item" *ngIf="(filterWrapper.size == macro.filter_size || !filterWrapper.size) && (filterWrapper.shell == macro.filter_shell || !filterWrapper.shell) && (filterWrapper.legs == macro.filter_legs || !filterWrapper.legs) && (filterWrapper.tail == macro.filter_tail || !filterWrapper.tail) && (filterWrapper.sensitive == macro.filter_sensitivity || !filterWrapper.sensitive)">
