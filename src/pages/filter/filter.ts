@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Http } from "@angular/http";
 import "rxjs/add/operator/map";
 import * as $ from "jquery";
 
@@ -79,7 +78,7 @@ export class FilterPage {
 
 	public allMacros = [];
 
-	constructor (private specimensProvider: SpecimensProvider, private http: Http, public navCtrl: NavController, public events: Events) {
+	constructor (private specimensProvider: SpecimensProvider, public navCtrl: NavController, public events: Events) {
 		$(document).ready(function($) {
 			$('#accordion').find('.accordion-toggle').click(function() {
 				$(this).toggleClass('activeState');
