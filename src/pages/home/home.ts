@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import "rxjs/add/operator/map";
 
-import { NavController, ToastController, Platform} from 'ionic-angular';
+import { NavController, ToastController, Platform } from 'ionic-angular';
 import { InAppBrowser } from "@ionic-native/in-app-browser";
 import { Network } from "@ionic-native/network";
 
