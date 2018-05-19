@@ -298,29 +298,26 @@
     "filter_sensitivity": "veryTol"
   },
   {
-    "title": "Freshwater Limpet",
-    "thumbnail": "limpet-th",
+    "title": "Freshwater Mussel",
+    "thumbnail": "mussel-th",
     "featured_image": [
-      "freshwater-limpet/freshwater-limpet1",
-      "freshwater-limpet/freshwater-limpet2",
-      "freshwater-limpet/freshwater-limpet3"
+      "mussel/freshwater-mussel1",
+      "mussel/freshwater-mussel2"
     ],
-    "video": "freshwater-limpet",
-    "poster": "freshwater-limpet-video-poster",
-    "sensitivity": "",
-    "phylum": "",
-    "class": "",
-    "order": "",
-    "family": "",
-    "size": "",
-    "habitat": "",
-    "diet": "",
-    "features": "",
-    "filter_size": "",
-    "filter_shell": "",
-    "filter_legs": "",
-    "filter_tail": "",
-    "filter_sensitivity": ""
+    "sensitivity": "Very Tolerant",
+    "phylum": "Mollusca",
+    "class": "Bivalvia",
+    "order": "Unionoida",
+    "family": "Hyriidae, Corbiculidae, Sphaeriidae",
+    "size": "10 &ndash; 150mm",
+    "habitat": "Variety or unpolluted inland waters",
+    "diet": "<strong>Filter feeding</strong> &ndash; food particles such as <strong>zooplankton, phytoplankton</strong>, and organic <strong>detritus</strong> from the water",
+    "features": "Shell consists of two separate valves hinged together.",
+    "filter_size": "nonmicro",
+    "filter_shell": "twoshell",
+    "filter_legs": "nolegs",
+    "filter_tail": "notail",
+    "filter_sensitivity": "veryTol"
   },
   {
     "title": "Freshwater Mussel",
