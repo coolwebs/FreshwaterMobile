@@ -22,12 +22,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/supports-screens">
-            <supports-screens
-                    android:resizeable="true"
-                    android:smallScreens="true"
-                    android:normalScreens="true"
-                    android:largeScreens="false"
-                    android:xlargeScreens="false" />
+            <supports-screens android:largeScreens="false" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="false" />
         </edit-config>
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
