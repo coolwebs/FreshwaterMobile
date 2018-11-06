@@ -178,7 +178,7 @@
     "filter_shell": "noshell",
     "filter_legs": "nolegs",
     "filter_tail": "notail",
-    "filter_sensitivity": "verySense"
+    "filter_sensitivity": "verySens"
   },
   {
     "title": "Damselfly",
